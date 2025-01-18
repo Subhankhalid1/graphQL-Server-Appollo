@@ -9,13 +9,13 @@ async function startApolloServer() {
   const httpServer = http.createServer(app);
 
   const server = new ApolloServer({
-    typeDefs, // your schema definitions
-    resolvers, // your resolvers
+    typeDefs, 
+    resolvers, 
   });
 
-  await server.start(); // Wait for the server to start
+  await server.start(); 
 
-  server.applyMiddleware({ app }); // Integrate Apollo Server with Express
+  server.applyMiddleware({ app });
 
   const PORT = process.env.PORT || 4000;
 
